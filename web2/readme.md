@@ -11,7 +11,7 @@
 ## 实验
 
 - [实验一 使用 Firebug 查看 CSS 和 JavaScript](practice/pra1.md)
-- [实验二 简单计算器](practice/pra2.md)
+- [实验二 简单计算器](practice/pra2/pra2.md)
 - [实验三 商品评分](practice/pra3.md)
 - [实验四 滚动相册](practice/pra4.md)
 - [实验五 仿 QQ 空间相册](practice/pra5.md)
