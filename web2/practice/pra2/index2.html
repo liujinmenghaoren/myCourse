@@ -1,112 +1,85 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
- <head>
-	<title>calculate </title>
-	<meta http-equiv = "Content-Type" content = "text/html;charaset = utf-8"/>
-	<style type="text/css">
-		*{
-			font-size: 36px;
-		}
-		table,td{
-			border:1px solid #CCC;
-		}
-		td{
-			padding:10px;
-		}
-		button{
-			width:50px;
-			height:50px;
-		}
-		#result{
-			text-align: right;
-		}
-
-	</style>
-	<script type="text/javascript">
-		//1、页面加载完成后，为每个按钮添加单击事件
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>网页计算器</title>
+		<style>
+			button{
+				width: 50px;
+				height: 50px;
+			}
+			td{
+				padding: 10px;
+			}
+			#result{
+				text-align: right;
+				font: bolder 26px "黑体";
+			}
+			table,td{
+				border: 1px solid #c0c0c0;
+			}
+		</style>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td colspan="3" id="result">0</td>
+				<td><button value="C">C</button></td>
+			</tr>
+			<tr>
+				<td><button value="1">1</button></td>
+				<td><button value="2">2</button></td>
+				<td><button value="3">3</button></td>
+				<td><button value="+">+</button></td>
+			</tr>
+			<tr>
+				<td><button value="4">4</button></td>
+				<td><button value="5">5</button></td>
+				<td><button value="6">6</button></td>
+				<td><button value="-">-</button></td>
+			</tr>
+			<tr>
+				<td><button value="7">7</button></td>
+				<td><button value="8">8</button></td>
+				<td><button value="9">9</button></td>
+				<td><button value="*">*</button></td>
+			</tr>
+			<tr>
+				<td><button value="0">0</button></td>
+				<td><button value=".">.</button></td>
+				<td><button value="=">=</button></td>
+				<td><button value="/">/</button></td>
+			</tr>
+		</table>
+	</body>
+	<script>
 		window.onload = function(){
 			var btns = document.getElementsByTagName('button');
-			for(var i=0; i<btns.length;i++){
+			for (var i=0; i<btns.length; i++){
 				btns[i].onclick = function(){
-					switch(this.value){
-						case '=':
-							calculate(); //计算
-							break;
-						case 'C':
-							clearData();
-							break;
+					var val = this.value;
+					switch (val){
+						case "=":
+						calculate();
+						break;
+						case "C":
+						document.getElementById('result').innerHTML='0';
+						break;
 						default:
-							showData(this);
+						var result = document.getElementById('result');
+						if (result.innerHTML==0){
+							result.innerHTML = '';
+						}
+						result.innerHTML += val;
+						break;
 					}
 				}
 			}
 		}
-
-		var str = '';
-		//显示数据
-		function showData(which){
-			str += which.value;
-
-			//更新结果框的值
-			document.getElementById('result').innerHTML = str;
-
-		}
-
 		function calculate(){
-			//获得结果框的数据
-			var data = document.getElementById('result').innerHTML;
-
-			//计算此字符串的运算结果
-			var result = eval(data);
-
-			result += '';
-			var pointPos = result.indexOf('.');
-			if(pointPos>0){
-				result = result.substr(0,pointPos+3);
-			}
-
-			//更新结果框的值
+			var equ = document.getElementById('result').innerHTML;
+			var result = eval(equ);
 			document.getElementById('result').innerHTML = result;
-			str = result;
-
-		}
-		function clearData(){
-			document.getElementById('result').innerHTML = '0';
-			str = '';
 		}
 	</script>
-
-  </head>
- <body>
-	<table>
-		<tr>
-			<td colspan="3" id="result">0</td>
-			<td><button value="C">C</button></td>
-		</tr>
-		<tr>
-			<td><button value="1">1</button></td>
-			<td><button value="2">2</button></td>
-			<td><button value="3">3</button></td>
-			<td><button value="+">+</button></td>
-		</tr>
-		<tr>
-			<td><button value="4">4</button></td>
-			<td><button value="5">5</button></td>
-			<td><button value="6">6</button></td>
-			<td><button value="-">-</button></td>
-		</tr>
-		<tr>
-			<td><button value="7">7</button></td>
-			<td><button value="8">8</button></td>
-			<td><button value="9">9</button></td>
-			<td><button value="*">*</button></td>
-		</tr>
-		<tr>
-			<td><button value="0">0</button></td>
-			<td><button value=".">.</button></td>
-			<td><button value="=">=</button></td>
-			<td><button value="/">/</button></td>
-		</tr>
-	</table>
- </body>
 </html>
