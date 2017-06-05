@@ -2,84 +2,11 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>网页计算器</title>
-		<style>
-			button{
-				width: 50px;
-				height: 50px;
-			}
-			td{
-				padding: 10px;
-			}
-			#result{
-				text-align: right;
-				font: bolder 26px "黑体";
-			}
-			table,td{
-				border: 1px solid #c0c0c0;
-			}
-		</style>
+		<title></title>
+		
 	</head>
 	<body>
-		<table>
-			<tr>
-				<td colspan="3" id="result">0</td>
-				<td><button value="C">C</button></td>
-			</tr>
-			<tr>
-				<td><button value="1">1</button></td>
-				<td><button value="2">2</button></td>
-				<td><button value="3">3</button></td>
-				<td><button value="+">+</button></td>
-			</tr>
-			<tr>
-				<td><button value="4">4</button></td>
-				<td><button value="5">5</button></td>
-				<td><button value="6">6</button></td>
-				<td><button value="-">-</button></td>
-			</tr>
-			<tr>
-				<td><button value="7">7</button></td>
-				<td><button value="8">8</button></td>
-				<td><button value="9">9</button></td>
-				<td><button value="*">*</button></td>
-			</tr>
-			<tr>
-				<td><button value="0">0</button></td>
-				<td><button value=".">.</button></td>
-				<td><button value="=">=</button></td>
-				<td><button value="/">/</button></td>
-			</tr>
-		</table>
+		
 	</body>
-	<script>
-		window.onload = function(){
-			var btns = document.getElementsByTagName('button');
-			for (var i=0; i<btns.length; i++){
-				btns[i].onclick = function(){
-					var val = this.value;
-					switch (val){
-						case "=":
-						calculate();
-						break;
-						case "C":
-						document.getElementById('result').innerHTML='0';
-						break;
-						default:
-						var result = document.getElementById('result');
-						if (result.innerHTML==0){
-							result.innerHTML = '';
-						}
-						result.innerHTML += val;
-						break;
-					}
-				}
-			}
-		}
-		function calculate(){
-			var equ = document.getElementById('result').innerHTML;
-			var result = eval(equ);
-			document.getElementById('result').innerHTML = result;
-		}
-	</script>
+	
 </html>
