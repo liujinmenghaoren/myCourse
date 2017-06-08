@@ -95,6 +95,11 @@ window.onload的意思就是说当我们浏览器的窗口加载完成后，后�
 				result.innerHTML += val;
 				break;
 		}
+		function calculate(){
+			var equ = document.getElementById('result').innerHTML;
+			var result = eval(equ);
+			document.getElementById('result').innerHTML = result;
+		}
 
 
 
