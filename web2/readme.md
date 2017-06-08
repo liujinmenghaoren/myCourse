@@ -25,6 +25,7 @@
 - [1-1](papers/1-1.md)
 - [1-3](papers/1-3.md)
 - [1-4](papers/1-4.md)
+- [实验二](practice/pra2/paper.md)
 
 ## 实验
 
