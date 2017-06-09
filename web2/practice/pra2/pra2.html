@@ -16,71 +16,72 @@
 			}
 			#result{
 				text-align: right;
-				font: bolder 26px '黑体';
+				font: bolder 26px "黑体";
 			}
 		</style>
 	</head>
 	<body>
 		<table>
 			<tr>
-				<td colspan="3" id="result">0</td>
-				<td><button value="C">C</button></td>
+			<td colspan="3" id="result">0</td>
+			<td><button value="C">C</button></td>
 			</tr>
 			<tr>
-				<td><button value="1">1</button></td>
-				<td><button value="2">2</button></td>
-				<td><button value="3">3</button></td>
-				<td><button value="+">+</button></td>
+			<td><button value="1">1</button></td>
+			<td><button value="2">2</button></td>
+			<td><button value="3">3</button></td>
+			<td><button value="+">+</button></td>
 			</tr>
 			<tr>
-				<td><button value="4">4</button></td>
-				<td><button value="5">5</button></td>
-				<td><button value="6">6</button></td>
-				<td><button value="-">-</button></td>
+			<td><button value="4">4</button></td>
+			<td><button value="5">5</button></td>
+			<td><button value="6">6</button></td>
+			<td><button value="-">-</button></td>
 			</tr>
 			<tr>
-				<td><button value="7">7</button></td>
-				<td><button value="8">8</button></td>
-				<td><button value="9">9</button></td>
-				<td><button value="*">*</button></td>
+			<td><button value="7">7</button></td>
+			<td><button value="8">8</button></td>
+			<td><button value="9">9</button></td>
+			<td><button value="*">*</button></td>
 			</tr>
 			<tr>
-				<td><button value="0">0</button></td>
-				<td><button value=".">.</button></td>
-				<td><button value="=">=</button></td>
-				<td><button value="/">/</button></td>
+			<td><button value="0">0</button></td>
+			<td><button value=".">.</button></td>
+			<td><button value="=">=</button></td>
+			<td><button value="/">/</button></td>
 			</tr>
 		</table>
 	</body>
 	<script>
-		window.onload = function(){
-			var btns = document.getElementsByTagName('button');
-			for (var i =0;i<btns.length;i++){
-				btns[i].onclick = function(){
-					var val = this.value;
-					switch (val){
-						case "=":
-						calculate();
-						break;
-						case "C":
-						document.getElementById('result').innerHTML = '0';
-						break;
-						default:
-						var result = document.getElementById('result');
-					if (result.innerHTML == 0){
-						result.innerHTML = "";
+	window.onload = function(){
+		var btns = document.getElementsByTagName('button');
+		for (var i = 0;i<btns.length;i++){
+			btns[i].onclick = function(){
+				var val = this.value;
+				switch (val){
+					case "=":
+					calculate();
+					break;
+					case "C":
+					document.getElementById('result').innerHTML = '0';
+					break;
+					default:
+					var result = document.getElementById('result');
+					if(result.innerHTML == 0){
+						result.innerHTML = '';
 					}
 					result.innerHTML += val;
-					break;
-					}
+					break
 					
 				}
 			}
 		}
-		function calculate(){
-			var equ = document.getElementById('result').innerHTML;
-			var result = eval(equ);
-			document.getElementById('result').innerHTML = result;
-		}
-	</script>	
+	}
+	
+	function calculate(){
+		var equ = document.getElementById('result').innerHTML;
+		var result = eval(equ);
+		document.getElementById('result').innerHTML = result;
+	}
+	</script>
 </html>
