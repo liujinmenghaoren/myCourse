@@ -71,7 +71,12 @@
 			window.onload = function(){
 				var btns = document.getElementsByTagName('button');
 				for (var i =0;i<btns.length;i++){
-				btns[i].onclick = function(){}
+				btns[i].onclick = function(){
+				var val = this.value;
+				switch(val){
+				
+				}
+				}
 			}
 
 window.onload的意思就是说当我们浏览器的窗口加载完成后，后面的这个函数就执行。看后面的这个函数，我们用document.getElementByTagName('button');这条语句来获取到所有的button元素，然后把它们存放到变量btns中。btns是以数组的方式存储，所以当我们想要获取它其中的某一个按钮元素时，和获取数组中元素的方式是一样的。我们用一个for循环来遍历其中的按钮元素。给某个元素添加单击事件后面跟一个事件处理函数。
