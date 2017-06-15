@@ -2,6 +2,10 @@
 
 ## [课程大纲](content/1-1.md)
 
+- [1-1 JavaScript 概述](content/1-1.md#1-1-JavaScript-概述)
+- [1-2 JavaScript 基础语法](content/1-1.md#1-2-JavaScript-基础语法)
+- [1-3 函数与事件处理](content/1-1.md#1-3-函数与事件处理)
+
 [思维导图](http://naotu.baidu.com/file/8f04ef2bfc15e79d851c5f706e9b0c97)
 
 ## 教案
