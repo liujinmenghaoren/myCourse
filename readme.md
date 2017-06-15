@@ -1,5 +1,5 @@
 ### 课程们
 
-[web 二]()
+[web 二](web2/readme.md)
 
-[软件测试]()
+[软件测试](softwareTesting/readme.md)
