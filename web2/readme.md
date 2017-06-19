@@ -8,13 +8,21 @@
 
 搭配于PPT
 
+已完成，不需修改的
+
+- [实验二 网页计算器](practice/pra2/paper.md)
+
+已完成，待完善的
+
 - [1-1 JavaScript 概述](papers/1-1.md)
 - [1-2 JavaScript 基础语法](papers/1-2.md)
+- [1-7 DOM 模型（一）](papers/1-7.md)
+
+还在写，没写完的
+
 - [1-3 函数与事件处理](papers/1-3.md)
 - [1-4 字符串和数组](papers/1-4.md)
 - [1-6 BOM 模型](papers/1-6.md)
-- [1-7 DOM 模型（一）](papers/1-7.md)
-- [实验二 网页计算器](practice/pra2/paper.md)
 
 ### 实验
 
