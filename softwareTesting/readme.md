@@ -10,5 +10,5 @@
 
 ### practice（待添加）
 
-[测验题](paper/test.md)
+[测验题](papers/test.md)
 
