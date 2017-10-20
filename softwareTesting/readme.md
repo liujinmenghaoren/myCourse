@@ -2,7 +2,7 @@
 
 ### 作业任务
 
-[闯关任务](paper/task.md)
+[闯关任务](./papers/task.md)
 
 [测验题](papers/test.md)
 
