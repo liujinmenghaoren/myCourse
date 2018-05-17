@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>非遗世界</title>
+		
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			.all {
+				width: 1338px;
+				margin: 0 auto;
+				height: 4640px;
+				background-color: #fafafa;
+			}
+			/*对 header 部分设置样式*/
+			.header {
+				margin: 0 auto;
+			}
+			/* header-top */
+			.header-top {
+				width: 100%;
+				height: 36px;
+				border-bottom: 1px solid #dadada;
+			}
+			
+			.header-login-ul li {
+				list-style-type: none;
+				display: inline-block;
+				margin-right: 22px;
+				
+			}
+			.header-login-ul a {
+				font-family: "微软雅黑";
+				font-size: 12px;
+				color: black;
+				line-height: 36px;
+			}
+			.header-login-ul {
+				margin-left: 920px;
+				/*width: 350px;*/
+			}
+			.header-login-ul i {
+				color: #d03d3d;
+				height: 20px;
+				display: inline-block;
+			}
+			/* header-bottom */
+			.header-bottom {
+				width: 1200px;
+				height: 85px;
+				margin: 0 auto;
+				/*background-color: #C0C0C0;*/
+				padding-top: 15px;
+			}
+			.header-logo {
+				width: 236px;
+				height: 70px;
+				float: left;
+			}
+			ul>li {
+				display: inline-block;
+				list-style-type: none;
+			}
+			.header-bottom-ul {
+				/*margin-right: 210px;*/
+				margin-top: 20px;
+				float: left;
+				display: inline-block;
+			}
+			.header-bottom-ul li {
+				padding:0 36px;
+				float: left;
+				border-right: 3px solid black;
+			}
+			body .all .li-border {
+				border: none;
+			}
+			a {
+				text-decoration: none;
+			}
+			.header-bottom-ul a {
+				font-family: "微软雅黑";
+				font-size: 16px;
+				color: black;
+			}
+			.header form {
+				float: left;
+				border: 1px solid #d03d3d;
+				margin-top: 16px;
+			}
+			.header form input[type=button] {
+				width: 28px;
+				height: 28px;
+				background-color: #D03D3D;
+				background-image: url(../image/search.png);
+				background-size: 20px 20px;
+				background-repeat: no-repeat;
+				background-position: center;
+				border: none;
+				float: left;
+			}
+			.header form input[type=text] {
+				height: 28px;
+				border: none;
+				float: left;
+			}
+			.header-last {
+				width: 100%;
+				height: 450px;
+				/*background-color: #D03D3D;*/
+				position: relative;
+			}
+			.auto-size {
+				display: block;
+				width: auto;  
+				height: auto;  
+				max-width: 100%;  
+				max-height: 100%;
+			}
+			.image-arrow .left {
+				float: left;
+				margin-left: 90px;
+			}
+			.image-arrow .right {
+				float: right;
+				margin-right: 90px;
+			}
+			.image-arrow {
+				width: 100%;
+				position: absolute;
+				top: 150px
+			}
+			.image-text {
+				position: absolute;
+				top: 24px;
+				left: 52%;
+				
+			}
+			
+			/*对 middle 部分的样式设置*/
+			
+			.middle>div {
+				width: 100%;
+				height: 1080px;
+				
+			}
+			.middle-lace {
+				text-align: center;
+			}
+			.middle-divs {
+				width: 1200px;
+				
+				margin: 10px auto 0;
+				
+			}
+			.middle-divs div, .tuihuo-ul>li>img, .tuihuo-ul>li>p {
+				float: left;
+				
+			}
+			.middle-divs-first {
+				width: 498px;
+				height: 498px;
+				background-image: url(../image/middle-1.png);
+				background-position: center;
+			}
+			.middle-divs-second {
+				width: 694px;
+				height: 498px;
+				margin-left: 8px;
+			}
+			.divs-float {
+				float: left;
+				width: 342px;
+				height: 243px;
+				background-position: center;
+			}
+			.second-one {
+				background-image: url(../image/middle-2.png);
+			}
+			.second-two {
+				margin-left: 8px;
+				background-image: url(../image/middle-3.png);
+			}
+			.second-three {
+				margin-top: 8px;
+				background-image: url(../image/middle-4.png);
+			}
+			.second-four {
+				margin-top: 8px;
+				margin-left: 8px;
+				background-image: url(../image/middle-5.png);
+			}
+			.middle-divs-four {
+				width: 498px;
+				height: 498px;
+				background-image: url(../image/middle-1.png);
+				background-position: center;
+			}
+			.middle-divs-three {
+				width: 694px;
+				height: 498px;
+				margin-left: 8px;
+			}
+			
+			/* 对 footer 部分样式设置*/
+			
+			.footer {
+				width: 100%;
+				height: 850px;
+			
+			}
+			.footer form {
+				text-align: center;
+			}
+			.footer form input {
+				background-color: #d03d3d;
+				border: none;
+				color: white;
+				width: 240px;
+				height: 64px;
+				font-family: "微软雅黑";
+				font-size: 24px;
+				border-radius: 5px;
+			}
+			.footer-icons {
+				background-color: #606060;
+				height: 136px;
+				padding-top: 16px;
+				margin-top: 40px;
+			}
+			.footer-icons i {
+				width: 80px;
+				height: 80px;
+				display: inline-block;
+				font-size: 80px;
+			}
+			.footer-icons .icon-huiyuan {
+				color: #f5ab16;
+			}
+			.footer-icons ul {
+				margin-left: 150px;
+			}
+			.footer-icons ul li {
+				margin-right: 150px;
+				text-align: center;
+				color: white;
+			}
+			.footer>p {
+				text-align: center;
+				color: #d03d3d;
+				font-size: 14px;
+				padding: 14px 0;
+				background-color: #cbcbcb;
+				margin-bottom: 60px;
+			}
+			.tuihuo {
+				height: 150px;
+				width: 100%;
+				/*background-color: #D03D3D;*/
+				border-top: 2px solid #e3e2e2;
+			}
+			.tuihuo-ul {
+				margin: 40px auto;
+				width:1034px;
+			}
+			.tuihuo-ul>li {
+				margin-right: 44px;
+				border-right: 1px solid #c8c8c8;
+			}
+			.tuihuo-ul>li>p {
+				margin: 10px 40px 0 20px;
+				font-family: "微软雅黑";
+				font-size: 18px;
+			}
+			.span-first {
+				font-weight: bold;
+			}
+			.span-second {
+				font-weight: normal;
+				color: #9f9f9f;
+			}
+			.footer>.more{
+				padding-top: 20px;
+				width: 100%;
+				height: 324px;
+				background-color: #3a3a3a;
+			}
+			.more-align {
+				
+				font-family: "微软雅黑";
+				color: white;
+				text-align: center;
+			}
+			.more-align>p {
+				font-size: 16px;
+				margin-top: 36px;
+				margin-bottom: 24px;
+			}
+			.more-align a {
+				display: inline-block;
+				border-right: 1px solid white;
+				color: white;
+				font-size: 14px;
+				padding: 0 10px;
+				
+			}
+		</style>
+		<link rel="stylesheet" href="//at.alicdn.com/t/font_669115_gmkumllfcsb81tt9.css" />
+	</head>
+	<body>
+		<div class="all">
+			<div class="header">
+				<div class="header-top">
+					<ul class="header-login-ul">
+						<li><a href="#">登录/注册</a></li>
+						<li><i class="iconfont icon-yidongduan"></i><a href="#">移动客户端</a></li>
+						<li><i class="iconfont icon-weixin"></i><a href="#">微信</a></li>
+					</ul>
+				</div>
+				<div class="header-bottom">
+					<div class="header-logo">
+						<img src="../image/feiyi-logo.png"/>
+					</div>
+					<ul class="header-bottom-ul">
+						<li><a href="#">首页</a></li>
+						<li><a href="#">文化馆</a></li>
+						<li><a href="#">藏品馆</a></li>
+						<li><a href="#">生活馆</a></li>
+						<li><a href="#">地方馆</a></li>
+						<li class="li-border"><a href="#">俱乐部</a></li>
+					</ul>
+					<form action="#" class="header-form">
+						<input type="text" />
+						<input type="button" />
+					</form>
+				</div>
+				<div class="header-last">
+					<div class="header-image">
+						<img class="auto-size" src="../image/feiyi-bar.png"/>
+						<div class="image-arrow">
+							<img class="left" src="../image/arrow-left.png"/>
+							<img class="right" src="../image/arrow-right.png"/>
+						</div>
+						<img class="image-text" src="../image/image-text.png"/>
+						<!--<ul class="image-ul">
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>-->
+					</div>
+					
+				</div>
+			</div>
+			<div class="middle">
+				<div class="middle-first">
+					
+					<div class="middle-lace">
+						<img class="" src="../image/lace.png"/>
+					</div>
+					<img class="auto-size" src="../image/feiyi-dizang.png"/>
+					<div class="middle-divs">
+						<div class="middle-divs-first"></div>
+						<div class="middle-divs-second">
+							<div class="divs-float second-one"></div>
+							<div class="divs-float second-two"></div>
+							<div class="divs-float second-three"></div>
+							<div class="divs-float second-four"></div>
+						</div>
+					</div>
+				</div>
+				<div class="middle-second">
+					<div class="middle-lace">
+						<img class="" src="../image/lace.png"/>
+					</div>
+					<img class="auto-size" src="../image/feiyi-hua.png"/>
+					<div class="middle-divs">
+						<div class="middle-divs-three">
+							<div class="divs-float second-one"></div>
+							<div class="divs-float second-two"></div>
+							<div class="divs-float second-three"></div>
+							<div class="divs-float second-four"></div>
+						</div>
+						<div class="middle-divs-four">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="footer-vip">
+					<form action="#">
+						<input type="button" value='会员'/>
+					</form>
+				</div>
+				<div class="footer-icons">
+					<ul>
+						<li>
+							<i class="iconfont icon-dingzhi"></i>
+							<p><br/>私人订制</p>
+						</li>
+						<li>
+							<i class="iconfont icon-shoucang"></i>
+							<p><br/>收藏</p>
+						</li>
+						<li>
+							<i class="iconfont icon-huiyuan"></i>
+							<p><br/>加入我们</p>
+						</li>
+						<li>
+							<i class="iconfont icon-liwu"></i>
+							<p><br/>送礼</p>
+						</li>
+						<li>
+							<i class="iconfont icon-zuanshi"></i>
+							<p><br/>俱乐部活动</p>
+						</li>
+					</ul>
+				</div>
+				<p class="statistics">目前在线：280人 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;聊天室：20个&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;拍卖场：280场&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;活动40个</p>
+				<div class="tuihuo">
+					<ul class="tuihuo-ul">
+						<li><img src="../image/tuihuo1.png"/><p><span class="span-first">满百包邮</span><br/><span class="span-second">品质服务，购物无忧</span></p></li>
+						<li><img src="../image/tuihuo2.png"/><p><span class="span-first">七天无理由退换货</span><br/><span class="span-second">为您提供售后无忧保障</span></p></li>
+						<li><img src="../image/tuihuo3.png"/><p><span class="span-first">授权专卖</span><br/><span class="span-second">正规授权，品质服务</span></p></li>
+					</ul>
+				</div>
+				<div class="more">
+					<div class="more-align">
+						<p>技艺及了解</p>
+						<a href="#">传统技艺</a>
+						<a href="#">传统美术</a>
+						<a href="#">传统制茶</a>
+						<a href="#">传统酿酒</a>
+						<a href="#">传统保健</a>
+						<a href="#">传统服饰</a>
+						<a class="li-border" href="#">传统美食</a>
+						<p>俱乐部</p>
+						<a href="#">优惠券</a>
+						<a href="#">限时打折</a>
+						<a href="#">拍卖</a>
+						<a href="#">团购</a>
+						<a href="#">积分兑换</a>
+						<a class="li-border" href="#">私人订制</a>
+						<p style="font-size: 14px;">&copy;&nbsp;非遗世界&nbsp;版权所有，并保留所有权利。冀ICP备15029982号-1</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
